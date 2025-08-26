@@ -2,7 +2,8 @@
 .btnSubmit{
 
     width: 20%;
-  
+    /* transition: box-shadow 0.5s ease-in-out; */ /* Smooth transition (fade-in effect) */
+    transition: 0.3s;
     border-radius: 25px;
     background-color: black;
     color: white;
@@ -11,10 +12,43 @@
 
 }
 
+/* Blowing effect 01 || Neon glow (pulsing effect) */
+/*.btnSubmit:hover {
+  animation: pulseGlow 1.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 5px rgb(0, 249, 236),
+                0 0 10px rgb(255, 0, 255);
+  }
+  to {
+    box-shadow: 0 0 20px rgb(0, 249, 236),
+                0 0 40px rgb(255, 0, 255);
+  }
+}*/
+
+/* Blowing effect 02 || Animated glowing effect (looping colors)*/
 .btnSubmit:hover{
 
-     box-shadow: 5px 1px 10px rgb(0, 249, 236),
+    animation: glow 2s infinite alternate;
+     /* box-shadow: 5px 1px 10px rgb(0, 249, 236), 
+                /* -7px 2px 10px rgb(255, 0, 255); */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 5px 1px 10px rgb(0, 249, 236),
                 -7px 2px 10px rgb(255, 0, 255);
+  }
+  50% {
+    box-shadow: 7px -1px 15px rgb(0, 249, 236),
+                -10px 3px 15px rgb(255, 0, 255);
+  }
+  100% {
+    box-shadow: 5px 1px 10px rgb(0, 255, 255),
+                -7px 2px 10px rgb(255, 50, 200);
+  }
 }
 
 /*Step 02*/
